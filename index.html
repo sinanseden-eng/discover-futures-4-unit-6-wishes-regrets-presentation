@@ -48,11 +48,11 @@
             max-height: 0;
             overflow: hidden;
             opacity: 0;
-            transition: all 0.5s ease-in-out;
+            transition: all 0.6s ease-in-out;
         }
         
         .glass-card.active .reveal-content {
-            max-height: 400px;
+            max-height: 800px;
             opacity: 1;
             margin-top: 1.5rem;
             padding-top: 1.5rem;
@@ -104,145 +104,176 @@
 
             <!-- 1. WISHES ABOUT THE PRESENT -->
             <div class="glass-card node-present rounded-3xl p-6 md:p-8 cursor-pointer" onclick="this.classList.toggle('active')">
-                    <i class="fa-solid fa-chevron-down"></i>
+                <div class="flex justify-between items-start">
+                    <div>
+                        <span class="text-sky-400 font-bold uppercase tracking-widest text-xs flex items-center gap-2 mb-2">
+                            <i class="fa-solid fa-house-chimney"></i> Concept 1
+                        </span>
+                        <h2 class="text-2xl md:text-3xl font-bold text-white mb-2">Wishes about the Present</h2>
+                        <p class="text-slate-400 text-sm">Wanting a current situation to be different (but it's impossible or unlikely).</p>
+                    </div>
+                    <div class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-sky-400 expand-icon transition-transform">
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                </div>
+
+                <div class="reveal-content">
+                    <div class="formula-box border-sky-500 p-4 rounded mb-5">
+                        <p class="mono text-sky-300 font-bold text-sm md:text-base">
+                            Wish / If only + <span class="text-white">Past Simple</span>
+                        </p>
+                    </div>
+                    
+                    <h3 class="text-xs uppercase tracking-widest text-slate-500 font-bold mb-3">Contextual Dialogue: The Freezing Flat</h3>
+                    <div class="bg-slate-900/50 p-5 rounded-xl border border-slate-700/50 mb-5 space-y-3">
+                        <p class="text-slate-300 italic text-sm mb-2 border-b border-slate-700 pb-2">Ali and Bora just moved into a small, old apartment in Istanbul in January.</p>
+                        <p class="text-slate-200"><span class="text-sky-400 font-bold">Ali:</span> "This new flat is freezing, and there is barely enough room for my bed."</p>
+                        <p class="text-slate-200"><span class="text-sky-400 font-bold">Bora:</span> "I know. <span class="text-white font-bold border-b-2 border-sky-500">I wish this place had</span> central heating instead of a tiny stove."</p>
+                        <p class="text-slate-200"><span class="text-sky-400 font-bold">Ali:</span> "<span class="text-white font-bold border-b-2 border-sky-500">If only it were</span> a bit bigger, too. We can't even fit a sofa in the living room!"</p>
+                    </div>
+
+                    <!-- Common Error Box -->
+                    <div class="bg-rose-950/20 border border-rose-900/50 p-4 rounded-xl">
+                        <h4 class="text-rose-400 font-bold text-xs uppercase tracking-widest mb-2 flex items-center gap-2">
+                            <i class="fa-solid fa-triangle-exclamation"></i> Common Error
+                        </h4>
+                        <p class="text-sm text-slate-300 mb-2">Using the <em>Present Tense</em> to talk about a present wish.</p>
+                        <p class="text-sm text-slate-400"><i class="fa-solid fa-xmark text-rose-500 mr-2"></i>I wish I <span class="line-through decoration-rose-500">have</span> a bigger room.</p>
+                        <p class="text-sm text-white mt-1"><i class="fa-solid fa-check text-emerald-500 mr-2"></i>I wish I <strong>had</strong> a bigger room.</p>
+                    </div>
                 </div>
             </div>
 
-            <div class="reveal-content">
-                <div class="formula-box border-sky-500 p-4 rounded mb-5">
-                    <p class="mono text-sky-300 font-bold text-sm md:text-base">
-                        Wish / If only + <span class="text-white">Past Simple</span>
-                    </p>
+            <!-- 2. REGRETS ABOUT THE PAST -->
+            <div class="glass-card node-past rounded-3xl p-6 md:p-8 cursor-pointer" onclick="this.classList.toggle('active')">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <span class="text-amber-400 font-bold uppercase tracking-widest text-xs flex items-center gap-2 mb-2">
+                            <i class="fa-solid fa-box-open"></i> Concept 2
+                        </span>
+                        <h2 class="text-2xl md:text-3xl font-bold text-white mb-2">Regrets about the Past</h2>
+                        <p class="text-slate-400 text-sm">Expressing sadness or regret about something that happened (or didn't happen) before now.</p>
+                    </div>
+                    <div class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-amber-400 expand-icon transition-transform">
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
                 </div>
-                
-                <h3 class="text-xs uppercase tracking-widest text-slate-500 font-bold mb-3">Contextual Examples:</h3>
-                <ul class="space-y-4">
-                    <li class="bg-slate-900/50 p-4 rounded-xl border border-slate-700/50">
-                        <p class="text-lg text-slate-200">"I <span class="text-sky-400 font-bold">wish</span> this new apartment <span class="text-white font-bold border-b-2 border-sky-500">felt</span> more cozy."</p>
-                        <p class="text-xs text-slate-500 mt-2 italic">(Reality: It doesn't feel cozy right now.)</p>
-                    </li>
-                    <li class="bg-slate-900/50 p-4 rounded-xl border border-slate-700/50">
-                        <p class="text-lg text-slate-200">"<span class="text-sky-400 font-bold">If only</span> we <span class="text-white font-bold border-b-2 border-sky-500">had</span> a permanent place to stay."</p>
-                        <p class="text-xs text-slate-500 mt-2 italic">(Reality: We do not have a permanent place.)</p>
-                    </li>
-                </ul>
-            </div>
-        </div>
 
-        <!-- 2. REGRETS ABOUT THE PAST -->
-        <div class="glass-card node-past rounded-3xl p-6 md:p-8 cursor-pointer" onclick="this.classList.toggle('active')">
-            <div class="flex justify-between items-start">
-                <div>
-                    <span class="text-amber-400 font-bold uppercase tracking-widest text-xs flex items-center gap-2 mb-2">
-                        <i class="fa-solid fa-box-open"></i> Concept 2
-                    </span>
-                    <h2 class="text-2xl md:text-3xl font-bold text-white mb-2">Regrets about the Past</h2>
-                    <p class="text-slate-400 text-sm">Expressing sadness or regret about something that happened (or didn't happen) before now.</p>
-                </div>
-                <div class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-amber-400 expand-icon transition-transform">
-                    <i class="fa-solid fa-chevron-down"></i>
-                </div>
-            </div>
+                <div class="reveal-content">
+                    <div class="formula-box border-amber-500 p-4 rounded mb-5">
+                        <p class="mono text-amber-300 font-bold text-sm md:text-base">
+                            Wish / If only + <span class="text-white">Past Perfect (had + V3)</span>
+                        </p>
+                    </div>
+                    
+                    <h3 class="text-xs uppercase tracking-widest text-slate-500 font-bold mb-3">Mini-Story: The Fragile Box</h3>
+                    <div class="bg-slate-900/50 p-5 rounded-xl border border-slate-700/50 mb-5 space-y-3">
+                        <p class="text-slate-200 leading-relaxed">
+                            Zeynep tried to pack all her kitchen supplies quickly before the movers arrived. When she opened the box in her new house, all her grandmother's tea glasses were broken. 
+                            She looked at the mess and sighed, "<span class="text-white font-bold border-b-2 border-amber-500">I wish I had wrapped</span> them in bubble wrap." 
+                            Her mother shook her head, "<span class="text-white font-bold border-b-2 border-amber-500">If only you hadn't rushed</span> the packing process last night."
+                        </p>
+                    </div>
 
-            <div class="reveal-content">
-                <div class="formula-box border-amber-500 p-4 rounded mb-5">
-                    <p class="mono text-amber-300 font-bold text-sm md:text-base">
-                        Wish / If only + <span class="text-white">Past Perfect (had + V3)</span>
-                    </p>
-                </div>
-                
-                <h3 class="text-xs uppercase tracking-widest text-slate-500 font-bold mb-3">Contextual Examples:</h3>
-                <ul class="space-y-4">
-                    <li class="bg-slate-900/50 p-4 rounded-xl border border-slate-700/50">
-                        <p class="text-lg text-slate-200">"I <span class="text-amber-400 font-bold">wish</span> I <span class="text-white font-bold border-b-2 border-amber-500">had cleared out</span> my closet before packing."</p>
-                        <p class="text-xs text-slate-500 mt-2 italic">(Reality: I didn't clear it out, and now I have too many boxes.)</p>
-                    </li>
-                    <li class="bg-slate-900/50 p-4 rounded-xl border border-slate-700/50">
-                        <p class="text-lg text-slate-200">"<span class="text-amber-400 font-bold">If only</span> we <span class="text-white font-bold border-b-2 border-amber-500">hadn't moved</span> away from our friends."</p>
-                        <p class="text-xs text-slate-500 mt-2 italic">(Reality: We did move away, and I regret it.)</p>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- 3. COMPLAINTS & ANNOYANCES -->
-        <div class="glass-card node-annoy rounded-3xl p-6 md:p-8 cursor-pointer" onclick="this.classList.toggle('active')">
-            <div class="flex justify-between items-start">
-                <div>
-                    <span class="text-rose-400 font-bold uppercase tracking-widest text-xs flex items-center gap-2 mb-2">
-                        <i class="fa-solid fa-face-angry"></i> Concept 3
-                    </span>
-                    <h2 class="text-2xl md:text-3xl font-bold text-white mb-2">Complaints & Habits</h2>
-                    <p class="text-slate-400 text-sm">Expressing annoyance about someone's current behavior or habits that you want them to stop.</p>
-                </div>
-                <div class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-rose-400 expand-icon transition-transform">
-                    <i class="fa-solid fa-chevron-down"></i>
+                    <!-- Common Error Box -->
+                    <div class="bg-rose-950/20 border border-rose-900/50 p-4 rounded-xl">
+                        <h4 class="text-rose-400 font-bold text-xs uppercase tracking-widest mb-2 flex items-center gap-2">
+                            <i class="fa-solid fa-triangle-exclamation"></i> Common Error
+                        </h4>
+                        <p class="text-sm text-slate-300 mb-2">Using the <em>Past Simple</em> instead of <em>Past Perfect</em> for past regrets.</p>
+                        <p class="text-sm text-slate-400"><i class="fa-solid fa-xmark text-rose-500 mr-2"></i>I wish I <span class="line-through decoration-rose-500">didn't leave</span> my keys yesterday.</p>
+                        <p class="text-sm text-white mt-1"><i class="fa-solid fa-check text-emerald-500 mr-2"></i>I wish I <strong>hadn't left</strong> my keys yesterday.</p>
+                    </div>
                 </div>
             </div>
 
-            <div class="reveal-content">
-                <div class="formula-box border-rose-500 p-4 rounded mb-5">
-                    <p class="mono text-rose-300 font-bold text-sm md:text-base">
-                        Wish / If only + <span class="text-white">Would + Base Verb</span>
-                    </p>
-                </div>
-                
-                <div class="bg-rose-950/30 border border-rose-900/50 p-3 rounded mb-4 text-xs text-rose-300">
-                    <i class="fa-solid fa-circle-exclamation mr-1"></i> <strong>Note:</strong> We cannot use "wish + would" to talk about ourselves (You can't say: <em>I wish I would...</em>)
+            <!-- 3. COMPLAINTS & ANNOYANCES -->
+            <div class="glass-card node-annoy rounded-3xl p-6 md:p-8 cursor-pointer" onclick="this.classList.toggle('active')">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <span class="text-rose-400 font-bold uppercase tracking-widest text-xs flex items-center gap-2 mb-2">
+                            <i class="fa-solid fa-face-angry"></i> Concept 3
+                        </span>
+                        <h2 class="text-2xl md:text-3xl font-bold text-white mb-2">Complaints & Habits</h2>
+                        <p class="text-slate-400 text-sm">Expressing annoyance about someone's current behavior or habits that you want them to stop.</p>
+                    </div>
+                    <div class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-rose-400 expand-icon transition-transform">
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
                 </div>
 
-                <h3 class="text-xs uppercase tracking-widest text-slate-500 font-bold mb-3">Contextual Examples:</h3>
-                <ul class="space-y-4">
-                    <li class="bg-slate-900/50 p-4 rounded-xl border border-slate-700/50">
-                        <p class="text-lg text-slate-200">"I <span class="text-rose-400 font-bold">wish</span> my brother <span class="text-white font-bold border-b-2 border-rose-500">wouldn't hoard</span> so much junk in his room."</p>
-                        <p class="text-xs text-slate-500 mt-2 italic">(Reality: He constantly hoards things, and it annoys me.)</p>
-                    </li>
-                    <li class="bg-slate-900/50 p-4 rounded-xl border border-slate-700/50">
-                        <p class="text-lg text-slate-200">"<span class="text-rose-400 font-bold">If only</span> the movers <span class="text-white font-bold border-b-2 border-rose-500">would be</span> more careful with the fragile boxes!"</p>
-                        <p class="text-xs text-slate-500 mt-2 italic">(Reality: They are being careless right now.)</p>
-                    </li>
-                </ul>
+                <div class="reveal-content">
+                    <div class="formula-box border-rose-500 p-4 rounded mb-5">
+                        <p class="mono text-rose-300 font-bold text-sm md:text-base">
+                            Wish / If only + <span class="text-white">Would + Base Verb</span>
+                        </p>
+                    </div>
+                    
+                    <h3 class="text-xs uppercase tracking-widest text-slate-500 font-bold mb-3">Contextual Dialogue: The Messy Roommate</h3>
+                    <div class="bg-slate-900/50 p-5 rounded-xl border border-slate-700/50 mb-5 space-y-3">
+                        <p class="text-slate-200"><span class="text-rose-400 font-bold">Mert:</span> "Why are there empty pizza boxes all over the living room again?"</p>
+                        <p class="text-slate-200"><span class="text-rose-400 font-bold">Can:</span> "I'll clean them up later, just relax."</p>
+                        <p class="text-slate-200"><span class="text-rose-400 font-bold">Mert:</span> "<span class="text-white font-bold border-b-2 border-rose-500">I wish you would stop</span> leaving your trash everywhere! It's a shared house."</p>
+                        <p class="text-slate-200"><span class="text-rose-400 font-bold">Can:</span> "And <span class="text-white font-bold border-b-2 border-rose-500">if only you wouldn't complain</span> every single morning!"</p>
+                    </div>
+
+                    <!-- Common Error Box -->
+                    <div class="bg-rose-950/20 border border-rose-900/50 p-4 rounded-xl">
+                        <h4 class="text-rose-400 font-bold text-xs uppercase tracking-widest mb-2 flex items-center gap-2">
+                            <i class="fa-solid fa-triangle-exclamation"></i> Common Error
+                        </h4>
+                        <p class="text-sm text-slate-300 mb-2">Using "would" to talk about <em>yourself</em> or about a <em>state</em> instead of an action.</p>
+                        <p class="text-sm text-slate-400"><i class="fa-solid fa-xmark text-rose-500 mr-2"></i>I wish I <span class="line-through decoration-rose-500">would speak</span> better English.</p>
+                        <p class="text-sm text-white mt-1"><i class="fa-solid fa-check text-emerald-500 mr-2"></i>I wish I <strong>spoke</strong> better English. (Because it's about yourself!)</p>
+                    </div>
+                </div>
             </div>
-        </div>
 
-        <!-- 4. PAST CONSEQUENCES (3rd Conditional) -->
-        <div class="glass-card node-consequence rounded-3xl p-6 md:p-8 cursor-pointer" onclick="this.classList.toggle('active')">
-            <div class="flex justify-between items-start">
-                <div>
-                    <span class="text-emerald-400 font-bold uppercase tracking-widest text-xs flex items-center gap-2 mb-2">
-                        <i class="fa-solid fa-code-branch"></i> Concept 4
-                    </span>
-                    <h2 class="text-2xl md:text-3xl font-bold text-white mb-2">Past Consequences</h2>
-                    <p class="text-slate-400 text-sm">Imagining a different past action and the different consequence it would have caused (Third Conditional).</p>
+            <!-- 4. PAST CONSEQUENCES (3rd Conditional) -->
+            <div class="glass-card node-consequence rounded-3xl p-6 md:p-8 cursor-pointer" onclick="this.classList.toggle('active')">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <span class="text-emerald-400 font-bold uppercase tracking-widest text-xs flex items-center gap-2 mb-2">
+                            <i class="fa-solid fa-code-branch"></i> Concept 4
+                        </span>
+                        <h2 class="text-2xl md:text-3xl font-bold text-white mb-2">Past Consequences</h2>
+                        <p class="text-slate-400 text-sm">Imagining a different past action and the different consequence it would have caused (Third Conditional).</p>
+                    </div>
+                    <div class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-emerald-400 expand-icon transition-transform">
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
                 </div>
-                <div class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-emerald-400 expand-icon transition-transform">
-                    <i class="fa-solid fa-chevron-down"></i>
+
+                <div class="reveal-content">
+                    <div class="formula-box border-emerald-500 p-4 rounded mb-5">
+                        <p class="mono text-emerald-300 font-bold text-sm md:text-base leading-relaxed">
+                            If + <span class="text-white">Past Perfect (had + V3)</span>, <br>
+                            Subject + <span class="text-white">would have + V3</span>
+                        </p>
+                    </div>
+                    
+                    <h3 class="text-xs uppercase tracking-widest text-slate-500 font-bold mb-3">Mini-Story: The Broken TV</h3>
+                    <div class="bg-slate-900/50 p-5 rounded-xl border border-slate-700/50 mb-5 space-y-3">
+                        <p class="text-slate-200 leading-relaxed">
+                            The moving company offered insurance, but Emre declined it to save money. During the drive, the truck hit a massive pothole and his expensive TV shattered. 
+                            "<span class="text-white font-bold border-b-2 border-emerald-500">If I had bought</span> the insurance, they <span class="text-white font-bold border-b-2 border-emerald-500">would have paid</span> for a new TV," he groaned, holding his head. 
+                            "I wouldn't have lost so much money if I hadn't been so cheap."
+                        </p>
+                    </div>
+
+                    <!-- Common Error Box -->
+                    <div class="bg-rose-950/20 border border-rose-900/50 p-4 rounded-xl">
+                        <h4 class="text-rose-400 font-bold text-xs uppercase tracking-widest mb-2 flex items-center gap-2">
+                            <i class="fa-solid fa-triangle-exclamation"></i> Common Error
+                        </h4>
+                        <p class="text-sm text-slate-300 mb-2">Putting "would have" inside the <em>If</em>-clause.</p>
+                        <p class="text-sm text-slate-400"><i class="fa-solid fa-xmark text-rose-500 mr-2"></i>If I <span class="line-through decoration-rose-500">would have packed</span> it, I wouldn't have lost it.</p>
+                        <p class="text-sm text-white mt-1"><i class="fa-solid fa-check text-emerald-500 mr-2"></i>If I <strong>had packed</strong> it, I wouldn't have lost it.</p>
+                    </div>
                 </div>
             </div>
 
-            <div class="reveal-content">
-                <div class="formula-box border-emerald-500 p-4 rounded mb-5">
-                    <p class="mono text-emerald-300 font-bold text-sm md:text-base leading-relaxed">
-                        If + <span class="text-white">Past Perfect (had + V3)</span>, <br>
-                        Subject + <span class="text-white">would have + V3</span>
-                    </p>
-                </div>
-                
-                <h3 class="text-xs uppercase tracking-widest text-slate-500 font-bold mb-3">Contextual Examples:</h3>
-                <ul class="space-y-4">
-                    <li class="bg-slate-900/50 p-4 rounded-xl border border-slate-700/50">
-                        <p class="text-lg text-slate-200">"<span class="text-emerald-400 font-bold">If</span> we <span class="text-white font-bold border-b-2 border-emerald-500">had stayed</span> in our old house, we <span class="text-white font-bold border-b-2 border-emerald-500">would have felt</span> a greater sense of belonging."</p>
-                        <p class="text-xs text-slate-500 mt-2 italic">(Reality: We didn't stay, so we didn't feel that belonging.)</p>
-                    </li>
-                    <li class="bg-slate-900/50 p-4 rounded-xl border border-slate-700/50">
-                        <p class="text-lg text-slate-200">"I <span class="text-white font-bold border-b-2 border-emerald-500">wouldn't have lost</span> my favorite book <span class="text-emerald-400 font-bold">if</span> I <span class="text-white font-bold border-b-2 border-emerald-500">had packed</span> it away properly."</p>
-                        <p class="text-xs text-slate-500 mt-2 italic">(Reality: I didn't pack it properly, so the consequence is that I lost it.)</p>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-    </main>
+        </main>
     </div>
 
     <!-- TAB 2: TRAINING EXERCISES -->
@@ -254,8 +285,8 @@
             <div id="quiz-container" class="max-w-2xl mx-auto">
                 <!-- Question 1 -->
                 <div class="quiz-question" id="q1">
-                    <span class="text-sky-400 font-bold text-xs uppercase tracking-widest mb-2 block">Rule 1: Present Wishes</span>
-                    <p class="text-xl text-slate-200 mb-6">"My new room is so small and dark."<br><br><span class="font-bold text-sky-400">I wish my new room ________________ bigger windows.</span></p>
+                    <p class="text-sky-400 font-bold text-xs uppercase tracking-widest mb-3 block border-b border-slate-700 pb-2">Question 1 of 16</p>
+                    <p class="text-xl text-slate-200 mb-6">"My new room is so small and dark."<br><br><span class="font-bold text-white">I wish my new room ________________ bigger windows.</span></p>
                     <div class="grid grid-cols-2 gap-4">
                         <button onclick="checkAnswer(this, true, 1)" class="bg-slate-800 hover:bg-slate-700 border border-slate-600 text-white py-3 rounded-lg transition-colors">had</button>
                         <button onclick="checkAnswer(this, false, 1)" class="bg-slate-800 hover:bg-slate-700 border border-slate-600 text-white py-3 rounded-lg transition-colors">would have</button>
@@ -264,8 +295,8 @@
                 
                 <!-- Question 2 -->
                 <div class="quiz-question hidden" id="q2">
-                    <span class="text-amber-400 font-bold text-xs uppercase tracking-widest mb-2 block">Rule 2: Past Regrets</span>
-                    <p class="text-xl text-slate-200 mb-6">"I didn't bring my thick winter coat, and now I'm freezing."<br><br><span class="font-bold text-amber-400">I wish I ________________ my winter coat.</span></p>
+                    <p class="text-amber-400 font-bold text-xs uppercase tracking-widest mb-3 block border-b border-slate-700 pb-2">Question 2 of 16</p>
+                    <p class="text-xl text-slate-200 mb-6">"I didn't bring my thick winter coat, and now I'm freezing."<br><br><span class="font-bold text-white">I wish I ________________ my winter coat.</span></p>
                     <div class="grid grid-cols-2 gap-4">
                         <button onclick="checkAnswer(this, false, 2)" class="bg-slate-800 hover:bg-slate-700 border border-slate-600 text-white py-3 rounded-lg transition-colors">brought</button>
                         <button onclick="checkAnswer(this, true, 2)" class="bg-slate-800 hover:bg-slate-700 border border-slate-600 text-white py-3 rounded-lg transition-colors">had brought</button>
@@ -274,8 +305,8 @@
 
                 <!-- Question 3 -->
                 <div class="quiz-question hidden" id="q3">
-                    <span class="text-rose-400 font-bold text-xs uppercase tracking-widest mb-2 block">Rule 3: Complaints</span>
-                    <p class="text-xl text-slate-200 mb-6">"My roommate constantly leaves empty boxes in the hallway."<br><br><span class="font-bold text-rose-400">If only he ________________ leaving his boxes everywhere!</span></p>
+                    <p class="text-rose-400 font-bold text-xs uppercase tracking-widest mb-3 block border-b border-slate-700 pb-2">Question 3 of 16</p>
+                    <p class="text-xl text-slate-200 mb-6">"My roommate constantly leaves empty boxes in the hallway."<br><br><span class="font-bold text-white">If only he ________________ leaving his boxes everywhere!</span></p>
                     <div class="grid grid-cols-2 gap-4">
                         <button onclick="checkAnswer(this, false, 3)" class="bg-slate-800 hover:bg-slate-700 border border-slate-600 text-white py-3 rounded-lg transition-colors">stopped</button>
                         <button onclick="checkAnswer(this, true, 3)" class="bg-slate-800 hover:bg-slate-700 border border-slate-600 text-white py-3 rounded-lg transition-colors">would stop</button>
@@ -284,11 +315,131 @@
 
                 <!-- Question 4 -->
                 <div class="quiz-question hidden" id="q4">
-                    <span class="text-emerald-400 font-bold text-xs uppercase tracking-widest mb-2 block">Rule 4: Past Consequences</span>
-                    <p class="text-xl text-slate-200 mb-6">"Because we threw away the old map, we got completely lost."<br><br><span class="font-bold text-emerald-400">If we hadn't thrown away the map, we ________________ lost.</span></p>
+                    <p class="text-emerald-400 font-bold text-xs uppercase tracking-widest mb-3 block border-b border-slate-700 pb-2">Question 4 of 16</p>
+                    <p class="text-xl text-slate-200 mb-6">"Because we threw away the old map, we got completely lost."<br><br><span class="font-bold text-white">If we hadn't thrown away the map, we ________________ lost.</span></p>
                     <div class="grid grid-cols-2 gap-4">
                         <button onclick="checkAnswer(this, true, 4)" class="bg-slate-800 hover:bg-slate-700 border border-slate-600 text-white py-3 rounded-lg transition-colors">wouldn't have gotten</button>
                         <button onclick="checkAnswer(this, false, 4)" class="bg-slate-800 hover:bg-slate-700 border border-slate-600 text-white py-3 rounded-lg transition-colors">didn't get</button>
+                    </div>
+                </div>
+
+                <!-- Question 5 -->
+                <div class="quiz-question hidden" id="q5">
+                    <p class="text-sky-400 font-bold text-xs uppercase tracking-widest mb-3 block border-b border-slate-700 pb-2">Question 5 of 16</p>
+                    <p class="text-xl text-slate-200 mb-6">"This commute to the new school is terrible."<br><br><span class="font-bold text-white">I wish we ________________ closer to the campus.</span></p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <button onclick="checkAnswer(this, false, 5)" class="bg-slate-800 hover:bg-slate-700 border border-slate-600 text-white py-3 rounded-lg transition-colors">live</button>
+                        <button onclick="checkAnswer(this, true, 5)" class="bg-slate-800 hover:bg-slate-700 border border-slate-600 text-white py-3 rounded-lg transition-colors">lived</button>
+                    </div>
+                </div>
+
+                <!-- Question 6 -->
+                <div class="quiz-question hidden" id="q6">
+                    <p class="text-amber-400 font-bold text-xs uppercase tracking-widest mb-3 block border-b border-slate-700 pb-2">Question 6 of 16</p>
+                    <p class="text-xl text-slate-200 mb-6">"I broke Mom's vase during the move."<br><br><span class="font-bold text-white">I wish I ________________ more careful with that box.</span></p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <button onclick="checkAnswer(this, true, 6)" class="bg-slate-800 hover:bg-slate-700 border border-slate-600 text-white py-3 rounded-lg transition-colors">had been</button>
+                        <button onclick="checkAnswer(this, false, 6)" class="bg-slate-800 hover:bg-slate-700 border border-slate-600 text-white py-3 rounded-lg transition-colors">was</button>
+                    </div>
+                </div>
+
+                <!-- Question 7 -->
+                <div class="quiz-question hidden" id="q7">
+                    <p class="text-rose-400 font-bold text-xs uppercase tracking-widest mb-3 block border-b border-slate-700 pb-2">Question 7 of 16</p>
+                    <p class="text-xl text-slate-200 mb-6">"My sister always plays her music at maximum volume."<br><br><span class="font-bold text-white">I wish she ________________ her music down.</span></p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <button onclick="checkAnswer(this, true, 7)" class="bg-slate-800 hover:bg-slate-700 border border-slate-600 text-white py-3 rounded-lg transition-colors">would turn</button>
+                        <button onclick="checkAnswer(this, false, 7)" class="bg-slate-800 hover:bg-slate-700 border border-slate-600 text-white py-3 rounded-lg transition-colors">turned</button>
+                    </div>
+                </div>
+
+                <!-- Question 8 -->
+                <div class="quiz-question hidden" id="q8">
+                    <p class="text-emerald-400 font-bold text-xs uppercase tracking-widest mb-3 block border-b border-slate-700 pb-2">Question 8 of 16</p>
+                    <p class="text-xl text-slate-200 mb-6">"We didn't hire professional movers, so we broke the TV."<br><br><span class="font-bold text-white">We wouldn't have broken the TV if we ________________ professional movers.</span></p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <button onclick="checkAnswer(this, false, 8)" class="bg-slate-800 hover:bg-slate-700 border border-slate-600 text-white py-3 rounded-lg transition-colors">would hire</button>
+                        <button onclick="checkAnswer(this, true, 8)" class="bg-slate-800 hover:bg-slate-700 border border-slate-600 text-white py-3 rounded-lg transition-colors">had hired</button>
+                    </div>
+                </div>
+
+                <!-- Question 9 -->
+                <div class="quiz-question hidden" id="q9">
+                    <p class="text-sky-400 font-bold text-xs uppercase tracking-widest mb-3 block border-b border-slate-700 pb-2">Question 9 of 16</p>
+                    <p class="text-xl text-slate-200 mb-6">"I don't know how to assemble this IKEA bed."<br><br><span class="font-bold text-white">I wish I ________________ how to put this together.</span></p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <button onclick="checkAnswer(this, true, 9)" class="bg-slate-800 hover:bg-slate-700 border border-slate-600 text-white py-3 rounded-lg transition-colors">knew</button>
+                        <button onclick="checkAnswer(this, false, 9)" class="bg-slate-800 hover:bg-slate-700 border border-slate-600 text-white py-3 rounded-lg transition-colors">know</button>
+                    </div>
+                </div>
+
+                <!-- Question 10 -->
+                <div class="quiz-question hidden" id="q10">
+                    <p class="text-amber-400 font-bold text-xs uppercase tracking-widest mb-3 block border-b border-slate-700 pb-2">Question 10 of 16</p>
+                    <p class="text-xl text-slate-200 mb-6">"I threw away my old diary, and now I miss it."<br><br><span class="font-bold text-white">If only I ________________ my old diary.</span></p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <button onclick="checkAnswer(this, false, 10)" class="bg-slate-800 hover:bg-slate-700 border border-slate-600 text-white py-3 rounded-lg transition-colors">didn't throw away</button>
+                        <button onclick="checkAnswer(this, true, 10)" class="bg-slate-800 hover:bg-slate-700 border border-slate-600 text-white py-3 rounded-lg transition-colors">hadn't thrown away</button>
+                    </div>
+                </div>
+
+                <!-- Question 11 -->
+                <div class="quiz-question hidden" id="q11">
+                    <p class="text-rose-400 font-bold text-xs uppercase tracking-widest mb-3 block border-b border-slate-700 pb-2">Question 11 of 16</p>
+                    <p class="text-xl text-slate-200 mb-6">"The landlord keeps promising to fix the sink but never does."<br><br><span class="font-bold text-white">If only the landlord ________________ the sink!</span></p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <button onclick="checkAnswer(this, true, 11)" class="bg-slate-800 hover:bg-slate-700 border border-slate-600 text-white py-3 rounded-lg transition-colors">would fix</button>
+                        <button onclick="checkAnswer(this, false, 11)" class="bg-slate-800 hover:bg-slate-700 border border-slate-600 text-white py-3 rounded-lg transition-colors">had fixed</button>
+                    </div>
+                </div>
+
+                <!-- Question 12 -->
+                <div class="quiz-question hidden" id="q12">
+                    <p class="text-emerald-400 font-bold text-xs uppercase tracking-widest mb-3 block border-b border-slate-700 pb-2">Question 12 of 16</p>
+                    <p class="text-xl text-slate-200 mb-6">"I didn't label the boxes, so it took hours to find my shoes."<br><br><span class="font-bold text-white">If I had labeled the boxes, I ________________ my shoes much faster.</span></p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <button onclick="checkAnswer(this, false, 12)" class="bg-slate-800 hover:bg-slate-700 border border-slate-600 text-white py-3 rounded-lg transition-colors">found</button>
+                        <button onclick="checkAnswer(this, true, 12)" class="bg-slate-800 hover:bg-slate-700 border border-slate-600 text-white py-3 rounded-lg transition-colors">would have found</button>
+                    </div>
+                </div>
+
+                <!-- Question 13 -->
+                <div class="quiz-question hidden" id="q13">
+                    <p class="text-sky-400 font-bold text-xs uppercase tracking-widest mb-3 block border-b border-slate-700 pb-2">Question 13 of 16</p>
+                    <p class="text-xl text-slate-200 mb-6">"The walls in this apartment are so thin."<br><br><span class="font-bold text-white">I wish this place ________________ better soundproofing.</span></p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <button onclick="checkAnswer(this, true, 13)" class="bg-slate-800 hover:bg-slate-700 border border-slate-600 text-white py-3 rounded-lg transition-colors">had</button>
+                        <button onclick="checkAnswer(this, false, 13)" class="bg-slate-800 hover:bg-slate-700 border border-slate-600 text-white py-3 rounded-lg transition-colors">has</button>
+                    </div>
+                </div>
+
+                <!-- Question 14 -->
+                <div class="quiz-question hidden" id="q14">
+                    <p class="text-amber-400 font-bold text-xs uppercase tracking-widest mb-3 block border-b border-slate-700 pb-2">Question 14 of 16</p>
+                    <p class="text-xl text-slate-200 mb-6">"We paid too much for this moving truck."<br><br><span class="font-bold text-white">I wish we ________________ prices before booking.</span></p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <button onclick="checkAnswer(this, false, 14)" class="bg-slate-800 hover:bg-slate-700 border border-slate-600 text-white py-3 rounded-lg transition-colors">compared</button>
+                        <button onclick="checkAnswer(this, true, 14)" class="bg-slate-800 hover:bg-slate-700 border border-slate-600 text-white py-3 rounded-lg transition-colors">had compared</button>
+                    </div>
+                </div>
+
+                <!-- Question 15 -->
+                <div class="quiz-question hidden" id="q15">
+                    <p class="text-rose-400 font-bold text-xs uppercase tracking-widest mb-3 block border-b border-slate-700 pb-2">Question 15 of 16</p>
+                    <p class="text-xl text-slate-200 mb-6">"My dog constantly barks at the new neighbors."<br><br><span class="font-bold text-white">I wish my dog ________________ barking at them.</span></p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <button onclick="checkAnswer(this, true, 15)" class="bg-slate-800 hover:bg-slate-700 border border-slate-600 text-white py-3 rounded-lg transition-colors">would stop</button>
+                        <button onclick="checkAnswer(this, false, 15)" class="bg-slate-800 hover:bg-slate-700 border border-slate-600 text-white py-3 rounded-lg transition-colors">stopped</button>
+                    </div>
+                </div>
+
+                <!-- Question 16 -->
+                <div class="quiz-question hidden" id="q16">
+                    <p class="text-emerald-400 font-bold text-xs uppercase tracking-widest mb-3 block border-b border-slate-700 pb-2">Question 16 of 16</p>
+                    <p class="text-xl text-slate-200 mb-6">"We left the windows open, so the rain ruined the carpet."<br><br><span class="font-bold text-white">If we had closed the windows, the rain ________________ the carpet.</span></p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <button onclick="checkAnswer(this, false, 16)" class="bg-slate-800 hover:bg-slate-700 border border-slate-600 text-white py-3 rounded-lg transition-colors">didn't ruin</button>
+                        <button onclick="checkAnswer(this, true, 16)" class="bg-slate-800 hover:bg-slate-700 border border-slate-600 text-white py-3 rounded-lg transition-colors">wouldn't have ruined</button>
                     </div>
                 </div>
 
@@ -331,6 +482,7 @@
                                 <input type="text" placeholder="Type your answer..." class="flex-grow w-full bg-slate-950 border border-slate-600 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-amber-500" onkeyup="checkSimulation(this, 'would stop', 'btn-sim-1')">
                                 <button id="btn-sim-1" class="bg-slate-700 text-slate-400 px-4 py-2 rounded-lg font-bold transition-colors pointer-events-none whitespace-nowrap">Check</button>
                             </div>
+                            <p class="text-xs text-slate-500 mt-2">Hint: Think about what you want the weather to do (stop).</p>
                         </div>
                     </div>
 
@@ -348,7 +500,7 @@
                                 <input type="text" placeholder="Type your answer..." class="flex-grow w-full bg-slate-950 border border-slate-600 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-amber-500" onkeyup="checkSimulation(this, 'hadn\\'t given away my guitar', 'btn-sim-2')">
                                 <button id="btn-sim-2" class="bg-slate-700 text-slate-400 px-4 py-2 rounded-lg font-bold transition-colors pointer-events-none whitespace-nowrap">Check</button>
                             </div>
-                            <p class="text-xs text-slate-500 mt-2">Hint: Use the words "hadn't given away my guitar".</p>
+                            <p class="text-xs text-slate-500 mt-2">Hint: Express regret using the negative form of "give away" + "my guitar".</p>
                         </div>
                     </div>
 
@@ -366,7 +518,7 @@
                                 <input type="text" placeholder="Type your answer..." class="flex-grow w-full bg-slate-950 border border-slate-600 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-amber-500" onkeyup="checkSimulation(this, 'wouldn\\'t have frozen', 'btn-sim-3')">
                                 <button id="btn-sim-3" class="bg-slate-700 text-slate-400 px-4 py-2 rounded-lg font-bold transition-colors pointer-events-none whitespace-nowrap">Check</button>
                             </div>
-                            <p class="text-xs text-slate-500 mt-2">Hint: Use the words "wouldn't have frozen".</p>
+                            <p class="text-xs text-slate-500 mt-2">Hint: What wouldn't have happened? Use the verb "freeze".</p>
                         </div>
                     </div>
 
@@ -384,7 +536,7 @@
                                 <input type="text" placeholder="Type your answer..." class="flex-grow w-full bg-slate-950 border border-slate-600 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-amber-500" onkeyup="checkSimulation(this, 'had a signal', 'btn-sim-4')">
                                 <button id="btn-sim-4" class="bg-slate-700 text-slate-400 px-4 py-2 rounded-lg font-bold transition-colors pointer-events-none whitespace-nowrap">Check</button>
                             </div>
-                            <p class="text-xs text-slate-500 mt-2">Hint: Use the words "had a signal".</p>
+                            <p class="text-xs text-slate-500 mt-2">Hint: State what you lack right now (verb: "have" + "a signal").</p>
                         </div>
                     </div>
 
@@ -402,7 +554,7 @@
                                 <input type="text" placeholder="Type your answer..." class="flex-grow w-full bg-slate-950 border border-slate-600 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-amber-500" onkeyup="checkSimulation(this, 'wouldn\\'t have died', 'btn-sim-5')">
                                 <button id="btn-sim-5" class="bg-slate-700 text-slate-400 px-4 py-2 rounded-lg font-bold transition-colors pointer-events-none whitespace-nowrap">Check</button>
                             </div>
-                            <p class="text-xs text-slate-500 mt-2">Hint: Use the words "wouldn't have died".</p>
+                            <p class="text-xs text-slate-500 mt-2">Hint: What wouldn't have happened? Use the verb "die".</p>
                         </div>
                     </div>
 
@@ -420,7 +572,7 @@
                                 <input type="text" placeholder="Type your answer..." class="flex-grow w-full bg-slate-950 border border-slate-600 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-amber-500" onkeyup="checkSimulation(this, 'would turn off the generator', 'btn-sim-6')">
                                 <button id="btn-sim-6" class="bg-slate-700 text-slate-400 px-4 py-2 rounded-lg font-bold transition-colors pointer-events-none whitespace-nowrap">Check</button>
                             </div>
-                            <p class="text-xs text-slate-500 mt-2">Hint: Use the words "would turn off the generator".</p>
+                            <p class="text-xs text-slate-500 mt-2">Hint: State the action you want them to take ("turn off" + "the generator").</p>
                         </div>
                     </div>
 
@@ -438,7 +590,7 @@
                                 <input type="text" placeholder="Type your answer..." class="flex-grow w-full bg-slate-950 border border-slate-600 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-amber-500" onkeyup="checkSimulation(this, 'hadn\\'t packed so many coats', 'btn-sim-7')">
                                 <button id="btn-sim-7" class="bg-slate-700 text-slate-400 px-4 py-2 rounded-lg font-bold transition-colors pointer-events-none whitespace-nowrap">Check</button>
                             </div>
-                            <p class="text-xs text-slate-500 mt-2">Hint: Use the words "hadn't packed so many coats".</p>
+                            <p class="text-xs text-slate-500 mt-2">Hint: Express regret about the action ("pack" + "so many coats").</p>
                         </div>
                     </div>
 
@@ -456,7 +608,7 @@
                                 <input type="text" placeholder="Type your answer..." class="flex-grow w-full bg-slate-950 border border-slate-600 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-amber-500" onkeyup="checkSimulation(this, 'were bigger', 'btn-sim-8')">
                                 <button id="btn-sim-8" class="bg-slate-700 text-slate-400 px-4 py-2 rounded-lg font-bold transition-colors pointer-events-none whitespace-nowrap">Check</button>
                             </div>
-                            <p class="text-xs text-slate-500 mt-2">Hint: Use the words "were bigger".</p>
+                            <p class="text-xs text-slate-500 mt-2">Hint: Express a wish about the van's size using the verb "be" + "bigger".</p>
                         </div>
                     </div>
 
@@ -474,10 +626,31 @@
                                 <input type="text" placeholder="Type your answer..." class="flex-grow w-full bg-slate-950 border border-slate-600 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-amber-500" onkeyup="checkSimulation(this, 'wouldn\\'t have stolen my chips', 'btn-sim-9')">
                                 <button id="btn-sim-9" class="bg-slate-700 text-slate-400 px-4 py-2 rounded-lg font-bold transition-colors pointer-events-none whitespace-nowrap">Check</button>
                             </div>
-                            <p class="text-xs text-slate-500 mt-2">Hint: Use the words "wouldn't have stolen my chips".</p>
+                            <p class="text-xs text-slate-500 mt-2">Hint: What wouldn't have happened? Use the verb "steal" + "my chips".</p>
                         </div>
                     </div>
                 </div>
+
+                <!-- AI INFINITE SCENARIO ZONE -->
+                <div class="mt-16 bg-indigo-950/40 p-8 rounded-3xl border border-indigo-500/40 shadow-[0_0_30px_rgba(99,102,241,0.15)] relative overflow-hidden">
+                    <div class="absolute -right-10 -top-10 text-9xl opacity-5"><i class="fa-solid fa-robot"></i></div>
+                    <div class="relative z-10">
+                        <h3 class="text-2xl md:text-3xl font-bold text-indigo-300 mb-2 flex items-center gap-3">
+                            <i class="fa-solid fa-sparkles text-indigo-400"></i> Infinite AI Practice
+                        </h3>
+                        <p class="text-slate-300 mb-6 text-lg">Mastered the basics? Have our AI co-teacher generate unique, endless van-life scenarios and instantly evaluate your custom grammar answers.</p>
+
+                        <button id="btn-generate-ai" onclick="generateAIScenario()" class="bg-indigo-600 hover:bg-indigo-500 text-white px-8 py-3 rounded-full font-bold uppercase tracking-widest text-sm transition-colors shadow-lg flex items-center gap-2">
+                            ✨ Generate Custom Scenario
+                        </button>
+
+                        <!-- Dynamic AI Content Container -->
+                        <div id="ai-scenario-container" class="hidden mt-8 bg-slate-900/80 p-6 rounded-2xl border border-indigo-500/50 flex flex-col md:flex-row gap-6 items-center">
+                            <!-- Injected via JS -->
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
     </div>
@@ -492,7 +665,6 @@
     <script>
         // Tab Logic
         function switchTab(tabId) {
-            // Hide all tabs
             document.getElementById('tab-presentation').classList.add('hidden');
             document.getElementById('tab-presentation').classList.remove('block');
             document.getElementById('tab-exercises').classList.add('hidden');
@@ -500,20 +672,18 @@
             document.getElementById('tab-context').classList.add('hidden');
             document.getElementById('tab-context').classList.remove('block');
 
-            // Reset buttons
             document.getElementById('btn-tab-presentation').classList.remove('active-tab');
             document.getElementById('btn-tab-exercises').classList.remove('active-tab');
             document.getElementById('btn-tab-context').classList.remove('active-tab');
 
-            // Activate Target Tab
             document.getElementById(tabId).classList.remove('hidden');
             document.getElementById(tabId).classList.add('block');
             
-            // Highlight Button
             const btn = document.getElementById('btn-' + tabId);
             btn.classList.add('active-tab');
         }
 
+        // Standard Exercises Logic
         function checkAnswer(btn, isCorrect, qNumber) {
             const container = btn.parentElement;
             const buttons = container.querySelectorAll('button');
@@ -528,7 +698,7 @@
                 
                 setTimeout(() => {
                     document.getElementById(`q${qNumber}`).classList.add('hidden');
-                    if (qNumber < 4) {
+                    if (qNumber < 16) {
                         document.getElementById(`q${qNumber + 1}`).classList.remove('hidden');
                     } else {
                         document.getElementById('q-success').classList.remove('hidden');
@@ -550,7 +720,7 @@
 
                 setTimeout(() => {
                     document.getElementById(`q${qNumber}`).classList.add('hidden');
-                    if (qNumber < 4) {
+                    if (qNumber < 16) {
                         document.getElementById(`q${qNumber + 1}`).classList.remove('hidden');
                     } else {
                         document.getElementById('q-success').classList.remove('hidden');
@@ -560,23 +730,19 @@
         }
 
         function resetQuiz() {
-            // Hide all questions
             document.querySelectorAll('.quiz-question').forEach(q => q.classList.add('hidden'));
             
-            // Reset buttons styling
             document.querySelectorAll('#quiz-container button').forEach(btn => {
-                // Only reset quiz buttons (exclude tab buttons or others)
                 if(btn.hasAttribute('onclick') && btn.getAttribute('onclick').includes('checkAnswer')) {
                     btn.disabled = false;
                     btn.className = "bg-slate-800 hover:bg-slate-700 border border-slate-600 text-white py-3 rounded-lg transition-colors";
                 }
             });
 
-            // Show first question
             document.getElementById('q1').classList.remove('hidden');
         }
 
-        // Nomad Simulation Checking Logic
+        // Hardcoded Nomad Simulation Logic
         function checkSimulation(inputElement, targetAnswer, btnId) {
             const val = inputElement.value.trim().toLowerCase().replace(/['"’]/g, "'");
             const btn = document.getElementById(btnId);
@@ -591,7 +757,6 @@
                 btn.classList.replace('text-slate-400', 'text-white');
                 btn.innerHTML = '<i class="fa-solid fa-check"></i> Correct';
             } else if (val.length > targetAnswer.length / 2) {
-                // Give a visual hint if they are typing but it's not quite right yet
                  btn.classList.replace('bg-slate-700', 'bg-amber-600/50');
                  btn.classList.replace('text-slate-400', 'text-amber-200');
                  btn.innerHTML = 'Keep going...';
@@ -601,6 +766,173 @@
                  btn.classList.replace('text-white', 'text-slate-400');
                  btn.classList.replace('text-amber-200', 'text-slate-400');
                  btn.innerHTML = 'Check';
+            }
+        }
+
+        // --- GEMINI API INTEGRATION ---
+        
+        const apiKey = ""; // API key is injected by the environment
+        
+        async function callGemini(prompt, systemInstruction, schema) {
+            const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
+
+            const payload = {
+                contents: [{ parts: [{ text: prompt }] }],
+                systemInstruction: { parts: [{ text: systemInstruction }] },
+                generationConfig: {
+                    responseMimeType: "application/json",
+                    responseSchema: schema
+                }
+            };
+
+            const delays = [1000, 2000, 4000, 8000, 16000];
+            let lastError = null;
+
+            for (let attempt = 0; attempt <= 5; attempt++) {
+                try {
+                    const response = await fetch(url, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
+
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+
+                    const result = await response.json();
+                    const text = result.candidates?.[0]?.content?.parts?.[0]?.text;
+                    if (!text) throw new Error("No text in response");
+                    return JSON.parse(text);
+                } catch (error) {
+                    lastError = error;
+                    if (attempt < 5) {
+                        await new Promise(resolve => setTimeout(resolve, delays[attempt]));
+                    }
+                }
+            }
+            throw lastError;
+        }
+
+        // AI Schema Definitions
+        const scenarioSchema = {
+            type: "OBJECT",
+            properties: {
+                emoji: { type: "STRING", description: "2 emojis closely representing the scenario" },
+                scenarioText: { type: "STRING", description: "A creative 2-sentence scenario about living as a digital nomad in a tiny van." },
+                ruleName: { type: "STRING", description: "The exact grammar rule name, e.g., 'Present Wish (Wish + Past Simple)', 'Past Regret (Wish + Past Perfect)', 'Complaint (Wish + would)', or 'Past Consequence (3rd Conditional)'" },
+                hint: { type: "STRING", description: "A subtle hint suggesting the verb or action the student should use without giving away the full answer." }
+            }
+        };
+
+        const evaluationSchema = {
+            type: "OBJECT",
+            properties: {
+                isCorrect: { type: "BOOLEAN", description: "True if the user's sentence uses the target grammar rule correctly and fits the context." },
+                feedback: { type: "STRING", description: "1-2 sentences of encouraging feedback. If correct, praise them. If wrong, explain the grammar error gently and provide the correct answer." }
+            }
+        };
+
+        let currentAIScenario = null;
+
+        async function generateAIScenario() {
+            const btn = document.getElementById('btn-generate-ai');
+            const container = document.getElementById('ai-scenario-container');
+
+            btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Generating...';
+            btn.disabled = true;
+
+            const rules = [
+                "Present Wish (Wish + Past Simple)",
+                "Past Regret (If only / Wish + Past Perfect)",
+                "Complaint (Wish + would)",
+                "Past Consequence (3rd Conditional)"
+            ];
+            const randomRule = rules[Math.floor(Math.random() * rules.length)];
+
+            const systemPrompt = "You are a creative English teacher. Invent a short, funny 2-sentence scenario about living in a van or moving houses. The scenario must prompt the user to use the specified target grammar rule to react to the situation.";
+            const userPrompt = `Generate a new scenario requiring the student to use this target grammar rule: ${randomRule}`;
+
+            try {
+                const result = await callGemini(userPrompt, systemPrompt, scenarioSchema);
+                currentAIScenario = result;
+
+                container.innerHTML = `
+                    <div class="w-full md:w-1/3 text-center">
+                        <span class="text-6xl block mb-2">${result.emoji}</span>
+                        <span class="text-indigo-400 font-bold uppercase tracking-widest text-xs">AI Generated</span>
+                    </div>
+                    <div class="w-full md:w-2/3">
+                        <p class="text-white text-lg mb-4">${result.scenarioText}</p>
+                        <p class="text-indigo-300 text-sm font-bold uppercase mb-2">Target Rule: ${result.ruleName}</p>
+                        <div class="flex gap-2 flex-wrap sm:flex-nowrap">
+                            <input type="text" id="ai-user-input" placeholder="Type your full sentence here..." class="flex-grow w-full bg-slate-950 border border-slate-600 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-indigo-500">
+                            <button id="btn-check-ai" onclick="checkAIScenario()" class="bg-indigo-600 hover:bg-indigo-500 text-white px-6 py-2 rounded-lg font-bold transition-colors whitespace-nowrap">
+                                ✨ Check
+                            </button>
+                        </div>
+                        <p class="text-xs text-slate-500 mt-2">Hint: ${result.hint}</p>
+                        <div id="ai-feedback" class="mt-4 hidden p-4 rounded-lg text-sm leading-relaxed border"></div>
+                    </div>
+                `;
+                container.classList.remove('hidden');
+            } catch (error) {
+                container.innerHTML = `
+                    <div class="w-full p-4 bg-rose-900/40 border border-rose-500/50 text-rose-400 rounded-xl text-center">
+                        <i class="fa-solid fa-triangle-exclamation mr-2"></i> Failed to communicate with the AI. Please try generating again.
+                    </div>`;
+                container.classList.remove('hidden');
+                console.error(error);
+            } finally {
+                btn.innerHTML = '✨ Generate Custom Scenario';
+                btn.disabled = false;
+            }
+        }
+
+        async function checkAIScenario() {
+            const inputEl = document.getElementById('ai-user-input');
+            const btn = document.getElementById('btn-check-ai');
+            const feedbackEl = document.getElementById('ai-feedback');
+            const userAnswer = inputEl.value.trim();
+
+            if (!userAnswer) return;
+
+            btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i>';
+            btn.disabled = true;
+            inputEl.disabled = true;
+
+            const systemPrompt = "You are a supportive English teacher. Evaluate the student's sentence based on the scenario and the required grammar rule. They must use the correct structure. Be strict on the grammar formula but flexible with their creative vocabulary choices.";
+            const userPrompt = `Scenario: ${currentAIScenario.scenarioText}\nTarget Rule: ${currentAIScenario.ruleName}\nStudent's Answer: ${userAnswer}`;
+
+            try {
+                const result = await callGemini(userPrompt, systemPrompt, evaluationSchema);
+
+                feedbackEl.classList.remove('hidden', 'bg-emerald-900/40', 'border-emerald-500/50', 'text-emerald-400', 'bg-rose-900/40', 'border-rose-500/50', 'text-rose-400');
+
+                if (result.isCorrect) {
+                    inputEl.classList.replace('border-slate-600', 'border-emerald-500');
+                    inputEl.classList.replace('border-rose-500', 'border-emerald-500');
+                    inputEl.classList.replace('focus:border-indigo-500', 'focus:border-emerald-500');
+                    
+                    feedbackEl.classList.add('bg-emerald-900/40', 'border-emerald-500/50', 'text-emerald-400');
+                    feedbackEl.innerHTML = `<div class="font-bold mb-1 text-emerald-300"><i class="fa-solid fa-check-circle mr-1"></i> Excellent Work!</div>${result.feedback}`;
+                } else {
+                    inputEl.classList.replace('border-slate-600', 'border-rose-500');
+                    inputEl.classList.replace('border-emerald-500', 'border-rose-500');
+                    inputEl.classList.replace('focus:border-indigo-500', 'focus:border-rose-500');
+                    
+                    feedbackEl.classList.add('bg-rose-900/40', 'border-rose-500/50', 'text-rose-400');
+                    feedbackEl.innerHTML = `<div class="font-bold mb-1 text-rose-300"><i class="fa-solid fa-times-circle mr-1"></i> Needs Revision</div>${result.feedback}`;
+                }
+            } catch (error) {
+                feedbackEl.classList.remove('hidden', 'bg-emerald-900/40', 'border-emerald-500/50', 'text-emerald-400');
+                feedbackEl.classList.add('bg-rose-900/40', 'border-rose-500/50', 'text-rose-400');
+                feedbackEl.innerHTML = `<i class="fa-solid fa-triangle-exclamation mr-2"></i> Error checking your answer with AI. Please try again.`;
+            } finally {
+                btn.innerHTML = '✨ Check';
+                btn.disabled = false;
+                inputEl.disabled = false;
+                inputEl.focus();
             }
         }
     </script>
