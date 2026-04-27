@@ -38,6 +38,12 @@
         .node-annoy:hover { border-color: #f43f5e; box-shadow: 0 10px 30px rgba(244, 63, 94, 0.2); } /* Rose */
         .node-consequence:hover { border-color: #10b981; box-shadow: 0 10px 30px rgba(16, 185, 129, 0.2); } /* Emerald */
 
+        /* If Clauses Colors */
+        .node-type0:hover { border-color: #a855f7; box-shadow: 0 10px 30px rgba(168, 85, 247, 0.2); } /* Purple */
+        .node-type1:hover { border-color: #3b82f6; box-shadow: 0 10px 30px rgba(59, 130, 246, 0.2); } /* Blue */
+        .node-type2:hover { border-color: #f97316; box-shadow: 0 10px 30px rgba(249, 115, 22, 0.2); } /* Orange */
+        .node-type3:hover { border-color: #10b981; box-shadow: 0 10px 30px rgba(16, 185, 129, 0.2); } /* Emerald */
+
         .formula-box {
             background: rgba(15, 23, 42, 0.8);
             border-left: 4px solid;
@@ -92,8 +98,10 @@
         <!-- TAB NAVIGATION -->
         <div class="flex flex-wrap justify-center gap-4 mt-10">
             <button onclick="switchTab('tab-presentation')" id="btn-tab-presentation" class="tab-btn active-tab px-6 py-3 rounded-full border border-slate-600 text-slate-300 uppercase tracking-widest text-sm">1. Core Grammar</button>
-            <button onclick="switchTab('tab-exercises')" id="btn-tab-exercises" class="tab-btn px-6 py-3 rounded-full border border-slate-600 text-slate-300 hover:border-sky-400 uppercase tracking-widest text-sm">2. Training Exercises</button>
-            <button onclick="switchTab('tab-context')" id="btn-tab-context" class="tab-btn px-6 py-3 rounded-full border border-slate-600 text-slate-300 hover:border-sky-400 uppercase tracking-widest text-sm">3. Nomad Simulation</button>
+            <button onclick="switchTab('tab-conditionals')" id="btn-tab-conditionals" class="tab-btn px-6 py-3 rounded-full border border-slate-600 text-slate-300 hover:border-sky-400 uppercase tracking-widest text-sm">2. If Clauses</button>
+            <button onclick="switchTab('tab-exercises')" id="btn-tab-exercises" class="tab-btn px-6 py-3 rounded-full border border-slate-600 text-slate-300 hover:border-sky-400 uppercase tracking-widest text-sm">3. Exercises</button>
+            <button onclick="switchTab('tab-context')" id="btn-tab-context" class="tab-btn px-6 py-3 rounded-full border border-slate-600 text-slate-300 hover:border-sky-400 uppercase tracking-widest text-sm">4. Simulation</button>
+            <button onclick="switchTab('tab-textbook')" id="btn-tab-textbook" class="tab-btn px-6 py-3 rounded-full border border-slate-600 text-slate-300 hover:border-sky-400 uppercase tracking-widest text-sm">5. Textbook</button>
         </div>
     </header>
 
@@ -276,7 +284,183 @@
         </main>
     </div>
 
-    <!-- TAB 2: TRAINING EXERCISES -->
+    <!-- TAB 2: IF CLAUSES REVISION -->
+    <div id="tab-conditionals" class="hidden pb-16">
+        <main class="w-full max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
+
+            <!-- TYPE 0 -->
+            <div class="glass-card node-type0 rounded-3xl p-6 md:p-8 cursor-pointer" onclick="this.classList.toggle('active')">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <span class="text-purple-400 font-bold uppercase tracking-widest text-xs flex items-center gap-2 mb-2">
+                            <i class="fa-solid fa-droplet"></i> Conditional Type 0
+                        </span>
+                        <h2 class="text-2xl md:text-3xl font-bold text-white mb-2">General Truths</h2>
+                        <p class="text-slate-400 text-sm">Used for facts, scientific laws, and things that are always true.</p>
+                    </div>
+                    <div class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-purple-400 expand-icon transition-transform">
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                </div>
+
+                <div class="reveal-content">
+                    <div class="formula-box border-purple-500 p-4 rounded mb-5">
+                        <p class="mono text-purple-300 font-bold text-sm md:text-base">
+                            If + <span class="text-white">Present Simple</span>, <span class="text-white">Present Simple</span>
+                        </p>
+                    </div>
+                    
+                    <h3 class="text-xs uppercase tracking-widest text-slate-500 font-bold mb-3">Contextual Dialogue: The Smart Home</h3>
+                    <div class="bg-slate-900/50 p-5 rounded-xl border border-slate-700/50 mb-5 space-y-3">
+                        <p class="text-slate-300 italic text-sm mb-2 border-b border-slate-700 pb-2">Explaining how the new house works.</p>
+                        <p class="text-slate-200"><span class="text-purple-400 font-bold">Dad:</span> "This house has a smart thermostat system."</p>
+                        <p class="text-slate-200"><span class="text-purple-400 font-bold">Son:</span> "What does it do?"</p>
+                        <p class="text-slate-200"><span class="text-purple-400 font-bold">Dad:</span> "<span class="text-white font-bold border-b-2 border-purple-500">If you leave</span> a window open, the heating <span class="text-white font-bold border-b-2 border-purple-500">turns off</span> automatically."</p>
+                    </div>
+
+                    <!-- Common Error Box -->
+                    <div class="bg-rose-950/20 border border-rose-900/50 p-4 rounded-xl">
+                        <h4 class="text-rose-400 font-bold text-xs uppercase tracking-widest mb-2 flex items-center gap-2">
+                            <i class="fa-solid fa-triangle-exclamation"></i> Common Error
+                        </h4>
+                        <p class="text-sm text-slate-300 mb-2">Using "will" in the result clause for a general scientific fact.</p>
+                        <p class="text-sm text-slate-400"><i class="fa-solid fa-xmark text-rose-500 mr-2"></i>If you heat ice, it <span class="line-through decoration-rose-500">will melt</span>.</p>
+                        <p class="text-sm text-white mt-1"><i class="fa-solid fa-check text-emerald-500 mr-2"></i>If you heat ice, it <strong>melts</strong>. (Type 0)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TYPE 1 -->
+            <div class="glass-card node-type1 rounded-3xl p-6 md:p-8 cursor-pointer" onclick="this.classList.toggle('active')">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <span class="text-blue-400 font-bold uppercase tracking-widest text-xs flex items-center gap-2 mb-2">
+                            <i class="fa-solid fa-calendar-day"></i> Conditional Type 1
+                        </span>
+                        <h2 class="text-2xl md:text-3xl font-bold text-white mb-2">Real / Possible Future</h2>
+                        <p class="text-slate-400 text-sm">Used for real situations that are highly likely to happen in the future.</p>
+                    </div>
+                    <div class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-blue-400 expand-icon transition-transform">
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                </div>
+
+                <div class="reveal-content">
+                    <div class="formula-box border-blue-500 p-4 rounded mb-5">
+                        <p class="mono text-blue-300 font-bold text-sm md:text-base">
+                            If + <span class="text-white">Present Simple</span>, <span class="text-white">will / can / may + V1</span>
+                        </p>
+                    </div>
+                    
+                    <h3 class="text-xs uppercase tracking-widest text-slate-500 font-bold mb-3">Contextual Dialogue: Packing Weekend</h3>
+                    <div class="bg-slate-900/50 p-5 rounded-xl border border-slate-700/50 mb-5 space-y-3">
+                        <p class="text-slate-300 italic text-sm mb-2 border-b border-slate-700 pb-2">The moving truck arrives tomorrow morning.</p>
+                        <p class="text-slate-200"><span class="text-blue-400 font-bold">Mom:</span> "Are you done packing your room?"</p>
+                        <p class="text-slate-200"><span class="text-blue-400 font-bold">Leo:</span> "Almost. I'm taking a break."</p>
+                        <p class="text-slate-200"><span class="text-blue-400 font-bold">Mom:</span> "<span class="text-white font-bold border-b-2 border-blue-500">If you finish</span> packing tonight, you <span class="text-white font-bold border-b-2 border-blue-500">will have</span> time to say goodbye to your friends tomorrow."</p>
+                    </div>
+
+                    <!-- Common Error Box -->
+                    <div class="bg-rose-950/20 border border-rose-900/50 p-4 rounded-xl">
+                        <h4 class="text-rose-400 font-bold text-xs uppercase tracking-widest mb-2 flex items-center gap-2">
+                            <i class="fa-solid fa-triangle-exclamation"></i> Common Error
+                        </h4>
+                        <p class="text-sm text-slate-300 mb-2">Putting "will" inside the <em>If</em>-clause.</p>
+                        <p class="text-sm text-slate-400"><i class="fa-solid fa-xmark text-rose-500 mr-2"></i>If it <span class="line-through decoration-rose-500">will rain</span>, we will stay inside.</p>
+                        <p class="text-sm text-white mt-1"><i class="fa-solid fa-check text-emerald-500 mr-2"></i>If it <strong>rains</strong>, we will stay inside.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TYPE 2 -->
+            <div class="glass-card node-type2 rounded-3xl p-6 md:p-8 cursor-pointer" onclick="this.classList.toggle('active')">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <span class="text-orange-400 font-bold uppercase tracking-widest text-xs flex items-center gap-2 mb-2">
+                            <i class="fa-solid fa-cloud"></i> Conditional Type 2
+                        </span>
+                        <h2 class="text-2xl md:text-3xl font-bold text-white mb-2">Unreal Present</h2>
+                        <p class="text-slate-400 text-sm">Used for imaginary, hypothetical, or impossible situations in the present or future.</p>
+                    </div>
+                    <div class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-orange-400 expand-icon transition-transform">
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                </div>
+
+                <div class="reveal-content">
+                    <div class="formula-box border-orange-500 p-4 rounded mb-5">
+                        <p class="mono text-orange-300 font-bold text-sm md:text-base">
+                            If + <span class="text-white">Past Simple</span>, <span class="text-white">would / could / might + V1</span>
+                        </p>
+                    </div>
+                    
+                    <h3 class="text-xs uppercase tracking-widest text-slate-500 font-bold mb-3">Contextual Dialogue: The Dream House</h3>
+                    <div class="bg-slate-900/50 p-5 rounded-xl border border-slate-700/50 mb-5 space-y-3">
+                        <p class="text-slate-300 italic text-sm mb-2 border-b border-slate-700 pb-2">Looking at expensive real estate online.</p>
+                        <p class="text-slate-200"><span class="text-orange-400 font-bold">Emma:</span> "Look at this mansion! It has a cinema and a pool."</p>
+                        <p class="text-slate-200"><span class="text-orange-400 font-bold">Liam:</span> "<span class="text-white font-bold border-b-2 border-orange-500">If I had</span> five million dollars, I <span class="text-white font-bold border-b-2 border-orange-500">would buy</span> it immediately."</p>
+                        <p class="text-slate-200"><span class="text-orange-400 font-bold">Emma:</span> "Well, <span class="text-white font-bold border-b-2 border-orange-500">If I were</span> you, I <span class="text-white font-bold border-b-2 border-orange-500">would start</span> saving up now!"</p>
+                    </div>
+
+                    <!-- Common Error Box -->
+                    <div class="bg-rose-950/20 border border-rose-900/50 p-4 rounded-xl">
+                        <h4 class="text-rose-400 font-bold text-xs uppercase tracking-widest mb-2 flex items-center gap-2">
+                            <i class="fa-solid fa-triangle-exclamation"></i> Common Error
+                        </h4>
+                        <p class="text-sm text-slate-300 mb-2">Using "was" instead of "were" in formal English for the "I" or "He/She/It" subjects.</p>
+                        <p class="text-sm text-slate-400"><i class="fa-solid fa-xmark text-rose-500 mr-2"></i>If I <span class="line-through decoration-rose-500">was</span> you, I would study.</p>
+                        <p class="text-sm text-white mt-1"><i class="fa-solid fa-check text-emerald-500 mr-2"></i>If I <strong>were</strong> you, I would study.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TYPE 3 -->
+            <div class="glass-card node-type3 rounded-3xl p-6 md:p-8 cursor-pointer" onclick="this.classList.toggle('active')">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <span class="text-emerald-400 font-bold uppercase tracking-widest text-xs flex items-center gap-2 mb-2">
+                            <i class="fa-solid fa-clock-rotate-left"></i> Conditional Type 3
+                        </span>
+                        <h2 class="text-2xl md:text-3xl font-bold text-white mb-2">Unreal Past</h2>
+                        <p class="text-slate-400 text-sm">Used for imagining a different past action and the different consequence it would have caused.</p>
+                    </div>
+                    <div class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-emerald-400 expand-icon transition-transform">
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                </div>
+
+                <div class="reveal-content">
+                    <div class="formula-box border-emerald-500 p-4 rounded mb-5">
+                        <p class="mono text-emerald-300 font-bold text-sm md:text-base leading-relaxed">
+                            If + <span class="text-white">Past Perfect (had + V3)</span>, <br>
+                            Subject + <span class="text-white">would have + V3</span>
+                        </p>
+                    </div>
+                    
+                    <h3 class="text-xs uppercase tracking-widest text-slate-500 font-bold mb-3">Contextual Dialogue: The Broken Vase</h3>
+                    <div class="bg-slate-900/50 p-5 rounded-xl border border-slate-700/50 mb-5 space-y-3">
+                        <p class="text-slate-300 italic text-sm mb-2 border-b border-slate-700 pb-2">The movers dropped a box.</p>
+                        <p class="text-slate-200"><span class="text-emerald-400 font-bold">Dad:</span> "Oh no, grandma's vase is completely shattered!"</p>
+                        <p class="text-slate-200"><span class="text-emerald-400 font-bold">Mom:</span> "<span class="text-white font-bold border-b-2 border-emerald-500">If they had wrapped</span> it in bubble wrap, it <span class="text-white font-bold border-b-2 border-emerald-500">wouldn't have broken</span>."</p>
+                        <p class="text-slate-200"><span class="text-emerald-400 font-bold">Dad:</span> "And <span class="text-white font-bold border-b-2 border-emerald-500">if we had hired</span> the professional company, this <span class="text-white font-bold border-b-2 border-emerald-500">never would have happened</span>."</p>
+                    </div>
+
+                    <!-- Common Error Box -->
+                    <div class="bg-rose-950/20 border border-rose-900/50 p-4 rounded-xl">
+                        <h4 class="text-rose-400 font-bold text-xs uppercase tracking-widest mb-2 flex items-center gap-2">
+                            <i class="fa-solid fa-triangle-exclamation"></i> Common Error
+                        </h4>
+                        <p class="text-sm text-slate-300 mb-2">Putting "would have" inside the <em>If</em>-clause.</p>
+                        <p class="text-sm text-slate-400"><i class="fa-solid fa-xmark text-rose-500 mr-2"></i>If I <span class="line-through decoration-rose-500">would have known</span>, I would have helped.</p>
+                        <p class="text-sm text-white mt-1"><i class="fa-solid fa-check text-emerald-500 mr-2"></i>If I <strong>had known</strong>, I would have helped.</p>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- TAB 3: TRAINING EXERCISES -->
     <div id="tab-exercises" class="hidden pb-16">
         <section class="w-full max-w-4xl mx-auto bg-slate-900/80 border border-slate-700 rounded-3xl p-8 md:p-12 text-center relative z-10 shadow-2xl">
             <h2 class="text-3xl font-bold text-white mb-2 uppercase tracking-widest">Training Exercises</h2>
@@ -655,6 +839,45 @@
         </section>
     </div>
 
+    <!-- TAB 4: TEXTBOOK PRACTICE -->
+    <div id="tab-textbook" class="hidden pb-16">
+        <section class="w-full max-w-4xl mx-auto bg-slate-900/80 border border-slate-700 rounded-3xl p-8 md:p-12 text-center relative z-10 shadow-2xl">
+            <div class="text-6xl mb-6">📚</div>
+            <h2 class="text-3xl font-bold text-white mb-2 uppercase tracking-widest">Textbook Practice</h2>
+            <p class="text-slate-400 text-sm mb-10">Consolidate your knowledge by completing the exercises in your Student's Book.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+                <!-- Phase 1 -->
+                <div class="bg-slate-800/50 p-8 rounded-2xl border border-sky-500/50 shadow-[0_0_15px_rgba(14,165,233,0.15)]">
+                    <span class="bg-sky-500 text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-4 inline-block">Phase 1</span>
+                    <h3 class="text-2xl font-bold text-white mb-2">Grammar Reference</h3>
+                    <p class="text-slate-300 mb-4">Go to the grammar reference section at the back of your book.</p>
+                    <div class="text-sky-400 font-bold text-lg mb-2">📍 Page 123</div>
+                    <ul class="list-disc pl-5 text-slate-400 space-y-2">
+                        <li>Complete <strong>Exercise 1</strong></li>
+                        <li>Complete <strong>Exercise 2</strong></li>
+                    </ul>
+                </div>
+
+                <!-- Phase 2 -->
+                <div class="bg-slate-800/50 p-8 rounded-2xl border border-amber-500/50 shadow-[0_0_15px_rgba(245,158,11,0.15)] relative">
+                    <div class="absolute -top-3 -right-3 bg-amber-500 text-slate-900 font-bold px-3 py-1 rounded-full text-xs uppercase tracking-widest shadow-lg">Next Step</div>
+                    <span class="bg-amber-500 text-slate-900 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-4 inline-block">Phase 2</span>
+                    <h3 class="text-2xl font-bold text-white mb-2">Core Practice</h3>
+                    <p class="text-slate-300 mb-4">Once you have finished the reference section, return to the main unit pages to apply what you've learned.</p>
+                    <div class="text-amber-400 font-bold text-lg mb-2">📍 Pages 62 & 63</div>
+                    <ul class="list-disc pl-5 text-slate-400 space-y-2">
+                        <li>Complete <strong>Exercises 5, 6, 7, and 8</strong></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="mt-10 p-4 bg-emerald-900/30 border border-emerald-500/50 rounded-xl text-emerald-400 font-medium">
+                <i class="fa-solid fa-check-circle mr-2"></i> When you finish all exercises, raise your hand so your teacher can check your work!
+            </div>
+        </section>
+    </div>
+
     <!-- Persistent Signature -->
     <div class="fixed bottom-4 right-4 z-50">
         <p class="text-slate-600 text-xs font-bold tracking-[0.2em] uppercase bg-slate-900/80 px-3 py-1 rounded-full backdrop-blur-sm">
@@ -665,16 +888,12 @@
     <script>
         // Tab Logic
         function switchTab(tabId) {
-            document.getElementById('tab-presentation').classList.add('hidden');
-            document.getElementById('tab-presentation').classList.remove('block');
-            document.getElementById('tab-exercises').classList.add('hidden');
-            document.getElementById('tab-exercises').classList.remove('block');
-            document.getElementById('tab-context').classList.add('hidden');
-            document.getElementById('tab-context').classList.remove('block');
-
-            document.getElementById('btn-tab-presentation').classList.remove('active-tab');
-            document.getElementById('btn-tab-exercises').classList.remove('active-tab');
-            document.getElementById('btn-tab-context').classList.remove('active-tab');
+            const tabs = ['tab-presentation', 'tab-conditionals', 'tab-exercises', 'tab-context', 'tab-textbook'];
+            tabs.forEach(t => {
+                document.getElementById(t).classList.add('hidden');
+                document.getElementById(t).classList.remove('block');
+                document.getElementById('btn-' + t).classList.remove('active-tab');
+            });
 
             document.getElementById(tabId).classList.remove('hidden');
             document.getElementById(tabId).classList.add('block');
